@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import ImageGalleryItem from '../ImageGalleryItems/ImageGalleryItem';
 import s from './ImageGallery.module.css';
 
-const ImageGallery = ({ images, onModalShow }) => (
+const ImageGallery = ({ searchInfo, onModalShow }) => (
   <div className={s.wrapper}>
     <ul className={s.ImageGallery}>
-      {images.map(({ id, webformatURL, largeImageURL, tags }) => {
+      {searchInfo.map(({ id, webformatURL, largeImageURL, tags }) => {
         return (
           <ImageGalleryItem
             key={id}
